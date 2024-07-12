@@ -1,0 +1,14 @@
+body {
+  background-color: #f5f5f5;
+}
+
+.App {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.MuiContainer-root {
+  padding-top: 20px;
+}
+.searchbar {
+  height: 20px;
+}
