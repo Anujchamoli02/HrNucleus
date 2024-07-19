@@ -7,14 +7,26 @@ import {
   Typography,
   Box,
   Chip,
-  Avatar,
-  IconButton,
 } from "@mui/material";
-import { BookmarkBorder, CheckCircle, Star } from "@mui/icons-material";
+import { CheckCircle, Star, WhatsApp } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 const JobCard = () => {
+  const navigate = useNavigate();
+  const Apply = () => {
+    navigate("/login");
+  };
   return (
-    <Card sx={{ maxWidth: 600, margin: "auto", mt: 4, boxShadow: 3 }}>
+    <Card
+      sx={{
+        maxWidth: 600,
+        margin: "auto",
+        mt: 4,
+        boxShadow: 3,
+        borderRadius: 3,
+        p: 1,
+      }}
+    >
       <CardContent>
         <Box
           sx={{
@@ -24,10 +36,6 @@ const JobCard = () => {
           }}
         >
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Avatar
-              src="https://www.example.com/facebook-logo.png"
-              sx={{ mr: 2 }}
-            />
             <Box>
               <Typography variant="h6" sx={{ fontWeight: "bold" }}>
                 Web Designer
@@ -76,14 +84,15 @@ const JobCard = () => {
               />
             ))}
           </Box>
-          <Typography variant="body2" sx={{ ml: 1 }}>
-            4.8
-          </Typography>
+
           <Typography variant="body2" sx={{ ml: 2 }}>
             Australia
           </Typography>
         </Box>
-        <Button variant="contained" color="success">
+        <Button variant="contained" color="success" onClick={Apply}>
+          Apply Now
+        </Button>
+        <Button variant="contained" color="success" startIcon={<WhatsApp />}>
           Apply Now
         </Button>
       </CardActions>

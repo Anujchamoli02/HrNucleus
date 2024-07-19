@@ -2,7 +2,6 @@
 
 const CountryService = {
   getCountries() {
-    // Simulated asynchronous call to fetch countries (replace with actual API call)
     return new Promise((resolve) => {
       setTimeout(() => {
         const countries = [

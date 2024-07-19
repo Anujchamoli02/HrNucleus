@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { AutoComplete } from "primereact/autocomplete";
 import CountryService from "./CountryService";
-import "primereact/resources/themes/lara-light-cyan/theme.css";
+import "primereact/resources/themes/lara-light-blue/theme.css";
 
-export default function ObjectDemo() {
+export default function AutoSearch() {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [filteredCountries, setFilteredCountries] = useState(null);
