@@ -38,7 +38,7 @@ export default function AutoSearch() {
         field="name"
         value={selectedCountry}
         suggestions={filteredCountries}
-        placeholder="Search"
+        placeholder="Country"
         completeMethod={search}
         onChange={(e) => setSelectedCountry(e.value)}
       />
