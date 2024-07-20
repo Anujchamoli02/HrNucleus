@@ -58,7 +58,7 @@ export default function Header() {
               textDecoration: "none",
             }}
           >
-            HR Nucleus hehe
+            HR Nucleus
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
