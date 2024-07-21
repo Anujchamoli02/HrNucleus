@@ -13,7 +13,7 @@ export default function JobGrid() {
     <Box
       sx={{
         flexGrow: 1,
-        padding: 10,
+        padding: 5,
         bgcolor: "#fff",
         borderBottom: "1px solid",
         borderColor: "divider",

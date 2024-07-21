@@ -7,15 +7,12 @@ import {
   Container,
   Avatar,
   Button,
-  Tooltip,
   MenuItem,
   Typography,
   IconButton,
 } from "@mui/material";
 import { WhatsApp } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
-import AdbIcon from "@mui/icons-material/Adb";
-import logo from ".././images/hr-image.png";
 
 const pages = ["Home", "Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];

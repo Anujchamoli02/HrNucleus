@@ -12,6 +12,7 @@ import {
 import {
   CenterFocusStrong,
   CheckCircle,
+  Height,
   Star,
   WhatsApp,
 } from "@mui/icons-material";
@@ -24,7 +25,19 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "background.paper",
-  borderRadius: 8,
+  borderRadius: 3,
+  boxShadow: 24,
+  paddingBottom: 2,
+};
+const modalsize = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 500,
+  height: "450px",
+  bgcolor: "background.paper",
+  borderRadius: 3,
   boxShadow: 24,
   paddingBottom: 2,
 };
@@ -127,7 +140,7 @@ const JobCard = ({ title }) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box sx={modalsize}>
           <Typography
             id="modal-modal-title"
             variant="h5"
@@ -135,34 +148,42 @@ const JobCard = ({ title }) => {
             sx={{
               textAlign: "center",
               bgcolor: "#fff",
-              borderRadius: 8,
+              borderRadius: 3,
               color: "#2e7d32",
               pb: 1,
               pt: 3,
             }}
           >
-            Job Opening / Post Resume
+            Sign-up to apply now
           </Typography>
           <hr></hr>
           <form className="form-container">
-            <input
-              type="text"
-              name="firstName"
-              placeholder="First Name"
-              className="input-field"
-              // value={formData.firstName}
-              // onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="lastName"
-              placeholder="Last Name"
-              className="input-field"
-              // value={formData.lastName}
-              // onChange={handleChange}
-              required
-            />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+            >
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First Name"
+                className="input-field"
+                // value={formData.firstName}
+                // onChange={handleChange}
+                required
+                style={{ marginRight: "10px" }}
+              />
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                className="input-field"
+                // value={formData.lastName}
+                // onChange={handleChange}
+                required
+              />
+            </div>
             <input
               type="email"
               name="email"
@@ -172,7 +193,18 @@ const JobCard = ({ title }) => {
               // onChange={handleChange}
               required
             />
-            <label for="myfile">Attachment (Optional):</label>
+            <input
+              type="number"
+              name="number"
+              placeholder="Phone no."
+              className="input-field"
+              // value={formData.email}
+              // onChange={handleChange}
+              required
+            />
+            <div style={{ margin: "10px" }}>
+              <label for="myfile">Attachment (Optional):</label>
+            </div>
             <input
               type="file"
               name="resume"

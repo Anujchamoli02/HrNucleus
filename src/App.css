@@ -8,8 +8,15 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-#searchbar {
+/* #searchbar {
   margin: 9px;
+} */
+.input-field {
+  margin: 10px;
+}
+#searchbar1 {
+  border: none;
+  max-width: 200%;
 }
 .form-container {
   display: flex;

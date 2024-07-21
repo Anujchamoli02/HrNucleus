@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AutoComplete } from "primereact/autocomplete";
 import CountryService from "./CountryService";
 import "primereact/resources/themes/lara-light-blue/theme.css";
+import { Search } from "@mui/icons-material";
 
 export default function AutoSearch() {
   const [countries, setCountries] = useState([]);
@@ -34,7 +35,7 @@ export default function AutoSearch() {
   return (
     <div className="card flex justify-content-center surface-900 ">
       <AutoComplete
-        id="searchbar"
+        id="searchbar1"
         field="name"
         value={selectedCountry}
         suggestions={filteredCountries}

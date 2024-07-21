@@ -20,7 +20,7 @@ export default function SearchForm() {
       <Typography variant="h4" component="h2" color={"white"} gutterBottom>
         <span style={{ color: "green" }}>We devote</span> our resources to you
       </Typography>
-      <Typography variant="body1" color="white">
+      <Typography variant="body1" color="white" sx={{ mb: 4 }}>
         Find Jobs, Employment & Career Opportunities. Some of the companies
         we've helped recruit excellent applicants over the years.
       </Typography>
@@ -30,14 +30,15 @@ export default function SearchForm() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          mt: 4,
           p: 2,
-          backgroundColor: "transparent",
-          borderRadius: "8px",
+          backgroundColor: "white",
+          borderRadius: 8,
+          width: "65%",
+          margin: "auto",
         }}
       >
         <AutoSearch />
-        <StateAuto className="state-margin" />
+        <StateAuto />
 
         <Button
           variant="contained"
